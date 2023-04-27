@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+    body{
+        background-color: black;
+    }
+    .bg1{
+        background-color: green;
+        padding: 5px;
+    }
+  
+    /* .q{
+        width: 348px;
+        height: 475px;
+    } */
+    .center{
+       display: block;
+        margin: auto;
+        /* width: 30%; */
+    }
+        
+   
+</style>
+
+  </head>
+  <body>
+    <img id="bulb" src="img/off.png" alt="" srcset="" class="center q">
+      <button id="btn" class="center bg1">Turn on</button>
+   
+
+
+      <script>
+            let btn=document.getElementById('btn');
+            let bulb=document.getElementById('bulb');
+            btn.addEventListener('click',toggleBulb)
+            function toggleBulb(e){
+                if(btn.textContent.includes('Turn on')){
+ bulb.src="img/on.png"
+    btn.textContent="Turn off"
+ 
+
+                }else{
+                    bulb.src="img/off.png"
+                 btn.textContent="Turn on"
+               
+                }
+                
+            }
+
+      </script>
+  </body>
+</html>

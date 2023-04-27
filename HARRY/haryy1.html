@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+    <!-- <style>
+      .first{
+        color: aqua;
+      }
+    </style> -->
+  </head>
+  <body> 
+
+    
+    
+
+
+      <div class="first">
+         <h1><b>TIME:<p id="in">rteert</p></b> </h1>
+      </div>
+          <div class="address">   <h1><b>ADDRESS:</b></h1> </div>
+   <script src="./harry1.css"></script>
+
+ <script>
+  // document.getElementsByClassName("address").style.color = "#ff0000";
+const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+document.write(timezone);
+
+// document.getElementsByClassName("vitore").innerHTML= timezone;
+let a;
+let date;
+let time;
+const options={
+  weekday:'long',year:'numeric',month:'long',day:'numeric'
+};
+setInterval(() => {
+    
+
+       a=new Date();
+         date=a.toLocaleDateString(undefined,options);
+        time= a.getHours()+":"+a.getMinutes()+":"+ a.getSeconds()+":"+a.getMilliseconds();
+        let b=document.getElementById('in').innerHTML= date +" on"+ " " +time;
+
+}, 1000);
+
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+  </body>
+</html>
